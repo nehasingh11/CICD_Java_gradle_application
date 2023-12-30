@@ -27,6 +27,7 @@ pipeline{
                 }  
             }
         }
+	    #Creating Docker hosted repository in Nexus and pushing the docker image through Jenkins
         stage("docker build & docker push"){
             steps{
                 script{
