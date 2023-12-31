@@ -28,6 +28,7 @@ pipeline{
             }
         }
 	    #Creating Docker hosted repository in Nexus and pushing the docker image through Jenkins
+	    #docker_pass = is helm password
         stage("docker build & docker push"){
             steps{
                 script{
