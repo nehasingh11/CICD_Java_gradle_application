@@ -27,8 +27,10 @@ pipeline{
                 }  
             }
         }
+	    
 	    #Creating Docker hosted repository in Nexus and pushing the docker image through Jenkins
 	    #docker_pass = is helm password
+	    
         stage("docker build & docker push"){
             steps{
                 script{
@@ -93,7 +95,10 @@ pipeline{
                }
             }
         }
-
+	    
+# To verify, create a new pod with curl image and then use the curl command to call the service deployed. Also remove the 
+# curl pod after the use, put restart=never. 
+	
         stage('verifying app deployment'){
             steps{
                 script{
